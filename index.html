@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+
+		function getIntegerValueFromId(id) {
+			try {
+				return parseInt(document.getElementById(id).value || 0)
+			} catch(e) {
+				console.log(e)
+				return 0
+			}
+			
+		}
+
+		function addNumber() {
+			var firstNumber = getIntegerValueFromId("addition-input-one");
+			var secondNumber = getIntegerValueFromId("addition-input-two");
+			var result = firstNumber + secondNumber;
+			document.getElementById("txt-result").textContent = result;
+		}
+
+		function subNumber() {
+			var firstNumber =getIntegerValueFromId ("subtraction-input-one");
+			var secondNumber =getIntegerValueFromId("subtraction-input-two");
+			var result = firstNumber - secondNumber;
+			document.getElementById("txt-result-1").textContent = result;
+		}
+
+		function productNumber() {
+
+			var firstNumber =getIntegerValueFromId ("product-input-one");
+			var secondNumber =getIntegerValueFromId("product-input-two");
+			var result = firstNumber * secondNumber;
+
+			document.getElementById("txt-result-2").textContent = result;
+		}
+		function divisionNumber() {
+
+			var firstNumber = getIntegerValueFromId("division-input-one");
+			var secondNumber = getIntegerValueFromId("division-input-two");
+			var result = firstNumber / secondNumber;
+
+			document.getElementById("txt-result-3").textContent = result;
+		}
+
+
+
+
+	</script>
+	<style>
+		body{
+			text-align: center;
+		}
+	</style>
+
+</head>
+<body>
+	<h4>Add</h4>
+
+	<input type="text" id="addition-input-one" name="TextBox1">
+	<br>
+	<br>
+	<input type="text" id="addition-input-two" name="TextBox2">
+	<br>Result : 
+	<span id="txt-result"></span>
+	<br><br>
+	<input type="button" name="clickbtn" value="Calculate" onclick="addNumber()">
+
+	<h4>Sub</h4>
+	<input type="text" id="subtraction-input-one" name="TextBox4">
+	<br>
+	<br>
+	<input type="text" id="subtraction-input-two" name="TextBox5">
+	<br>Result :
+	<span id="txt-result-1"></span>
+	<br><br>
+	<input type="button" name="clickbtn1" value="Calculate1" onclick="subNumber()">
+
+
+	<h4>Product</h4>
+	<input type="text" id="product-input-one" name="TextBox7">
+	<br>
+	<br>
+	<input type="text" id="product-input-two" name="TextBox8">
+	<br>Result :
+	<span id="txt-result-2"></span>
+	<br>
+	<br>
+	<input type="button" name="clickbtn2" value="Calculate2" onclick="productNumber()">
+
+
+	<h4>Division</h4>
+	<input type="text" id="division-input-one" name="TextBox10">
+	<br>
+	<br>
+	<input type="text" id="division-input-two" name="TextBox11">
+	<br>Result :
+	<span id="txt-result-3"></span>
+	<br><br>
+	<input type="button" name="clickbtn3" value="Calculate3" onclick="divisionNumber()">
+
+
+
+
+
+
+
+</body>
+</html>
